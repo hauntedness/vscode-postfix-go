@@ -1,10 +1,11 @@
 # Postfix templates for Golang
-[![Version](https://vsmarketplacebadge.apphb.com/version-short/yokoe.vscode-postfix-go.svg
-)](https://marketplace.visualstudio.com/items?itemName=yokoe.vscode-postfix-go)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs/yokoe.vscode-postfix-go.svg
-)](https://marketplace.visualstudio.com/items?itemName=yokoe.vscode-postfix-go)
+[![Version](https://vsmarketplacebadge.apphb.com/version-short/fr-str.vscode-postfix-go-fr.svg
+)](https://marketplace.visualstudio.com/items?itemName=fr-str.vscode-postfix-go-fr)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/fr-str.vscode-postfix-go-fr.svg
+)](https://marketplace.visualstudio.com/items?itemName=fr-str.vscode-postfix-go-fr)
 
 Forked from [vscode-postfix-ts](https://github.com/ipatalas/vscode-postfix-ts)
+Forked from [vscode-postfix-go](https://github.com/yokoe/vscode-postfix-go)
 
 ![feature X](images/demo.gif)
 
@@ -19,8 +20,9 @@ All available templates (`expr` means the expression on which the template is ap
 | **.if**           | `if expr` |
 | **.else**         | `if !expr` |
 | **.nil**          | `if expr == nil` |
-| **.notnil**       | `if expr != nil` |
+| **.nnil**         | `if expr != nil` |
 | **.forr**         | `for index := range expr` |
+| **.fori**         | `for i := 0; i < len(expr); i++` |
 | **.for**          | `for index, element := range expr` |
 | **.return**       | `return expr` |
 | **.var**          | `name := expr` |
@@ -33,6 +35,10 @@ All available templates (`expr` means the expression on which the template is ap
 | **.struct**       | `type expr struct` |
 | **.interface**    | `type expr interface` |
 | **.switch**       | `switch expr` |
+| **.exist**        | `if v, ok := expr; !ok {}` |
+| **.list**         | `[]type{expr}` |
+| **.func**         | `func expr()` |
+| **.method**       | `func (t *expr)` |
 
 ## Author
 

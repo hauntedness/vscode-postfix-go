@@ -1,10 +1,10 @@
 {
-	"name": "vscode-postfix-go",
-	"displayName": "Golang postfix code completion",
+	"name": "vscode-postfix-go-fr",
+	"displayName": "Golang postfix",
 	"description": "Postfix templates for Golang",
-	"version": "0.0.12",
+	"version": "0.0.15",
 	"license": "MIT",
-	"publisher": "yokoe",
+	"publisher": "fr-str",
 	"engines": {
 		"vscode": "^1.12.0"
 	},
@@ -14,10 +14,10 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/yokoe/vscode-postfix-go"
+		"url": "https://github.com/fr-str/vscode-postfix-go"
 	},
 	"bugs": {
-		"url": "https://github.com/yokoe/vscode-postfix-go/issues"
+		"url": "https://github.com/fr-str/vscode-postfix-go/issues"
 	},
 	"activationEvents": [
 		"*"
@@ -70,6 +70,7 @@
 	},
 	"scripts": {
 		"vscode:prepublish": "tsc -p ./",
+		"pkgvars": "node ./node_modules/vscode/bin/install",
 		"compile": "tsc -watch -p ./",
 		"postinstall": "node ./node_modules/vscode/bin/install",
 		"test": "NODE_ENV=test node ./node_modules/vscode/bin/test",
@@ -88,7 +89,7 @@
 		"tslint": "^5.10.0",
 		"tslint-config-standard": "^7.0.0",
 		"tslint-eslint-rules": "^5.3.1",
-		"vscode": "^1.1.18",
+		"vscode": "^1.1.37",
 		"typescript": "^2.8.3"
 	},
 	"dependencies": {

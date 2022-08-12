@@ -22,3 +22,11 @@
 
 ## [0.0.12] - 2018-11-04
 - Fixed custom template trailing period issue (#8)
+
+## [0.0.13] - 2022-8-12
+- Added list template
+- Added exists template
+- Added fori template
+- Added func template
+- Added method template
+- Changed 'not nil' template
