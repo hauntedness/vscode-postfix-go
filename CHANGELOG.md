@@ -30,3 +30,6 @@
 - Added func template
 - Added method template
 - Changed 'not nil' template
+
+## [0.0.16] - 2022-8-18
+- Added type conv template

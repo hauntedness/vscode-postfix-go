@@ -39,6 +39,8 @@ All available templates (`expr` means the expression on which the template is ap
 | **.list**         | `[]type{expr}` |
 | **.func**         | `func expr()` |
 | **.method**       | `func (t *expr)` |
+| **.type**         | `[]byte/string/int/float(expr)` |
+
 
 ## Author
 
