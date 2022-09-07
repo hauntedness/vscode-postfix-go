@@ -23,7 +23,7 @@
 ## [0.0.12] - 2018-11-04
 - Fixed custom template trailing period issue (#8)
 
-## [0.0.13] - 2022-8-12
+## [0.0.13] - 2022-08-12
 - Added list template
 - Added exists template
 - Added fori template
@@ -31,5 +31,8 @@
 - Added method template
 - Changed 'not nil' template
 
-## [0.0.16] - 2022-8-18
+## [0.0.16] - 2022-08-18
 - Added type conv template
+
+## [0.0.17] - 2022-09-07
+- Improve 'getLastComponent'

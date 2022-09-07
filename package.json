@@ -2,7 +2,7 @@
 	"name": "vscode-postfix-go-fr",
 	"displayName": "Golang postfix",
 	"description": "Postfix templates for Golang",
-	"version": "0.0.16",
+	"version": "0.0.17",
 	"license": "MIT",
 	"publisher": "fr-str",
 	"engines": {
