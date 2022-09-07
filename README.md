@@ -47,4 +47,4 @@ All available templates (`expr` means the expression on which the template is ap
 [Sota Yokoe](https://github.com/yokoe) [(twitter)](https://twitter.com/croquette0212)
 
 ## Contributors
-[Hamza Anis](https://github.com/HamzaAnis)
+[Hamza Anis](https://github.com/HamzaAnis) [fr-str](https://github.com/fr-str)
