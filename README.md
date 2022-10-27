@@ -15,31 +15,26 @@ Under development. Any suggestions are welcomed.
 
 All available templates (`expr` means the expression on which the template is applied):
 
-| Template          | Outcome |
-| -------:          | ------- |
-| **.if**           | `if expr` |
-| **.else**         | `if !expr` |
-| **.nil**          | `if expr == nil` |
-| **.nnil**         | `if expr != nil` |
-| **.forr**         | `for index := range expr` |
-| **.fori**         | `for i := 0; i < len(expr); i++` |
-| **.for**          | `for index, element := range expr` |
-| **.return**       | `return expr` |
-| **.var**          | `name := expr` |
-| **.const**        | `const name type = expr` |
-| **.append**       | `expr = append(expr, element)` |
-| **.len**          | `len(expr)` |
-| **.print**        | `fmt.Println(expr)` |
-| **.printf**       | `fmt.Printf("%+v\n", expr)` |
-| **.error**        | `errors.New("expr")` |
-| **.struct**       | `type expr struct` |
-| **.interface**    | `type expr interface` |
-| **.switch**       | `switch expr` |
-| **.exist**        | `if v, ok := expr; !ok {}` |
-| **.list**         | `[]type{expr}` |
-| **.func**         | `func expr()` |
-| **.method**       | `func (t *expr)` |
-| **.type**         | `[]byte/string/int/float(expr)` |
+|       Template | Outcome                            |
+| -------------: | ---------------------------------- |
+|        **.if** | `if expr`                          |
+|      **.else** | `if !expr`                         |
+|       **.nil** | `if expr == nil`                   |
+|      **.nnil** | `if expr != nil`                   |
+|      **.forr** | `for index := range expr`          |
+|      **.fori** | `for i := 0; i < len(expr); i++`   |
+|       **.for** | `for index, element := range expr` |
+|    **.return** | `return expr`                      |
+|       **.len** | `len(expr)`                        |
+|     **.error** | `fmt.Errorf("error:\n%w", err)`    |
+|    **.struct** | `type expr struct`                 |
+| **.interface** | `type expr interface`              |
+|    **.switch** | `switch expr`                      |
+|     **.exist** | `if v, ok := expr; !ok {}`         |
+|      **.list** | `[]type{expr}`                     |
+|      **.func** | `func expr()`                      |
+|    **.method** | `func (t *expr)`                   |
+|      **.type** | `[]byte/string/int/float(expr)`    |
 
 
 ## Author
