@@ -9,7 +9,6 @@ import * as _ from 'lodash'
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import * as vsc from 'vscode'
-import { VarTemplate } from '../src/templates/varTemplates'
 import { getCurrentSuggestion } from '../src/postfixCompletionProvider'
 import { getCurrentDelay, delay } from './utils'
 
@@ -44,7 +43,7 @@ describe('Template usage', () => {
   testTemplateUsage('return expression', 'return x * 100', ['not'])
 })
 
-function testTemplateUsage (testDescription: string, initialText: string, expectedTemplates: string[]) {
+function testTemplateUsage(testDescription: string, initialText: string, expectedTemplates: string[]) {
   it(testDescription, (done: MochaDone) => {
     vsc.workspace.openTextDocument({ language: LANGUAGE }).then((doc) => {
       return getAvailableSuggestions(doc, initialText).then(templates => {
@@ -57,7 +56,7 @@ function testTemplateUsage (testDescription: string, initialText: string, expect
   })
 }
 
-function getAvailableSuggestions (doc: vsc.TextDocument, initialText: string) {
+function getAvailableSuggestions(doc: vsc.TextDocument, initialText: string) {
   return vsc.window.showTextDocument(doc, vsc.ViewColumn.One).then((editor) => {
     let cursorIdx = initialText.indexOf('{cursor}')
     if (cursorIdx > -1) {

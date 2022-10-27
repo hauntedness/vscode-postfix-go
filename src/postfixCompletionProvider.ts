@@ -4,19 +4,18 @@ import * as path from 'path'
 import * as _ from 'lodash'
 import { CompletionItemBuilder } from './completionItemBuilder'
 import { IPostfixTemplate } from './template'
-import { build } from './templates/varTemplates'
 import { CustomTemplate } from './templates/customTemplate'
 
 let currentSuggestion = undefined
 
 export class PostfixCompletionProvider implements vsc.CompletionItemProvider {
   private templates: IPostfixTemplate[] = []
-  constructor () {
+  constructor() {
     this.loadBuiltinTemplates()
     this.loadCustomTemplates()
   }
 
-  provideCompletionItems (document: vsc.TextDocument, position: vsc.Position, token: vsc.CancellationToken): vsc.CompletionItem[] | vsc.CompletionList | Thenable<vsc.CompletionItem[] | vsc.CompletionList> {
+  provideCompletionItems(document: vsc.TextDocument, position: vsc.Position, token: vsc.CancellationToken): vsc.CompletionItem[] | vsc.CompletionList | Thenable<vsc.CompletionItem[] | vsc.CompletionList> {
     let line = document.lineAt(position.line)
     let dotIdx = line.text.lastIndexOf('.', position.character)
 
@@ -36,7 +35,7 @@ export class PostfixCompletionProvider implements vsc.CompletionItemProvider {
       .map(t => t.buildCompletionItem(code, position, line.text.substring(dotIdx + 1, position.character)))
   }
 
-  resolveCompletionItem (item: vsc.CompletionItem, token: vsc.CancellationToken): vsc.ProviderResult<vsc.CompletionItem> {
+  resolveCompletionItem(item: vsc.CompletionItem, token: vsc.CancellationToken): vsc.ProviderResult<vsc.CompletionItem> {
     currentSuggestion = item.label
     return item
   }

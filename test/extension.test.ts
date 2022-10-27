@@ -8,7 +8,6 @@ import * as assert from 'assert'
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import * as vsc from 'vscode'
-import { VarTemplate } from '../src/templates/varTemplates'
 import { getCurrentSuggestion } from '../src/postfixCompletionProvider'
 import { getCurrentDelay, delay } from './utils'
 
@@ -119,7 +118,7 @@ describe('Simple template tests', () => {
   })
 })
 
-function testTemplate (initialText: string, template: string, expectedResult: string, trimWhitespaces?: boolean) {
+function testTemplate(initialText: string, template: string, expectedResult: string, trimWhitespaces?: boolean) {
   return (done: MochaDone) => {
     vsc.workspace.openTextDocument({ language: LANGUAGE }).then((doc) => {
       return selectAndAcceptSuggestion(
@@ -134,7 +133,7 @@ function testTemplate (initialText: string, template: string, expectedResult: st
   }
 }
 
-function testTemplateWithOptions (initialText: string, template: string, expectedResult: string, trimWhitespaces?: boolean, skipSuggestions: number = 0, cancelQuickPick: boolean = false) {
+function testTemplateWithOptions(initialText: string, template: string, expectedResult: string, trimWhitespaces?: boolean, skipSuggestions: number = 0, cancelQuickPick: boolean = false) {
   return (done: MochaDone) => {
     vsc.workspace.openTextDocument({ language: LANGUAGE }).then((doc) => {
       return selectAndAcceptSuggestion(
@@ -161,7 +160,7 @@ function testTemplateWithOptions (initialText: string, template: string, expecte
   }
 }
 
-function selectAndAcceptSuggestion (doc: vsc.TextDocument, initialText: string, template: string) {
+function selectAndAcceptSuggestion(doc: vsc.TextDocument, initialText: string, template: string) {
   return vsc.window.showTextDocument(doc, vsc.ViewColumn.One).then((editor) => {
     let cursorIdx = initialText.indexOf('{cursor}')
     if (cursorIdx > -1) {
@@ -197,7 +196,7 @@ function selectAndAcceptSuggestion (doc: vsc.TextDocument, initialText: string, 
   })
 }
 
-function assertText (doc: vsc.TextDocument, expectedResult: string, trimWhitespaces: boolean) {
+function assertText(doc: vsc.TextDocument, expectedResult: string, trimWhitespaces: boolean) {
   let result = doc.getText()
 
   if (trimWhitespaces) {
